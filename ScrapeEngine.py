@@ -37,9 +37,12 @@ def main(args):
 	print("Location? kedah/kelantan/etc :")
 	location1 = input()
 
-	print("Enter Car model")
-	search_box = input()
-	res = requests.get('https://www.mudah.my/'+location1+'/cars-for-sale?lst=0&fs=1&q='+search_box+'&so=1&trm=1&pe=2')
+	print("Product Name / brand")
+	item = input()
+
+	print("cari apa? ")
+  search_box = input()
+	res = requests.get('https://www.mudah.my/'+location1+'/'+item+'-for-sale?lst=0&fs=1&q='+search_box+'&so=1&trm=1&pe=2')
 	soup = BeautifulSoup(res.text, 'lxml')
 	
 	#print(soup.prettify())
