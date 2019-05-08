@@ -34,7 +34,8 @@ def main(args):
 	pwd ="Password"
 	recepient_email = "recepient@gmail.com"
 	location1 = "Malaysia"
-	search_box = "Civic"
+	print("Enter Car model")
+	search_box = input()
 	res = requests.get('https://www.mudah.my/'+location1+'/cars-for-sale?lst=0&fs=1&q='+search_box+'&so=1&trm=1&pe=2')
 	soup = BeautifulSoup(res.text, 'lxml')
 	
