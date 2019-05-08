@@ -33,13 +33,15 @@ def main(args):
 	user="UserEmail@gmail.com"
 	pwd ="Password"
 	recepient_email = "recepient@gmail.com"
+
 	print("Location? kedah/kelantan/etc :")
 	location1 = input()
+
 	print("Product Name / brand")
 	item = input()
 
 	print("cari apa? ")
-	search_box = input()
+  search_box = input()
 	res = requests.get('https://www.mudah.my/'+location1+'/'+item+'-for-sale?lst=0&fs=1&q='+search_box+'&so=1&trm=1&pe=2')
 	soup = BeautifulSoup(res.text, 'lxml')
 	
